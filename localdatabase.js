@@ -11,15 +11,14 @@ const testSchema = new mongoose.Schema({
   rating: Number,
 });
 
-// const toursModal = mongoose.model("tours", toursSchema);
-const listModal = mongoose.model("tours", testSchema);
+// 🔴🔴🔴 THE NAME OF COLLECTIONS SHOULD BE IN PLURAL FORM, THEN ONLY THEY WORK IF NOT THEY CONVERT TO PLURAL FORM
+//EVEN THEY DECLARE IN SINGULAR... (i.e.male to males, try to tries)
+const listModal = mongoose.model("try", testSchema);
 
-app.get("/", (req, resp) => {
+app.get("/", async (req, resp) => {
   try {
-    listModal
-      .find({})
-      .then((res) => resp.json(res))
-      .catch((err) => console.log(err));
+    const data = await listModal.find();
+    resp.json(data);
   } catch (err) {
     resp.send(err);
   }
