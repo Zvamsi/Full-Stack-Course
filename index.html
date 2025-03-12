@@ -5,13 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      body {
+        background-color: gray;
+      }
+      input {
+        border-radius: 50px;
+        border: none;
+        padding: 3px;
+        font-size: 20px;
+        margin: 2px;
+      }
+      button {
+        background-color: rgb(4, 240, 4);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        padding: 7px;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: green;
+        transition: 0.15s;
+      }
+      button:active {
+        background-color: greenyellow;
+      }
+      .book {
+        background-color: rgb(225, 234, 225);
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+      h3 {
+        margin-top: 2px;
+      }
+      p {
+        margin-bottom: 2px;
+      }
+    </style>
   </head>
   <body>
     <div class="div1">
       <form action="" id="book-form">
-        <input type="text" id="title" placeholder="title" /> <br />
-        <input type="text" id="author" placeholder="author" /><br />
-        <input type="number" id="year" placeholder="year" /><br />
+        <input type="text" id="title" placeholder=" title" /> <br />
+        <input type="text" id="author" placeholder=" author" /><br />
+        <input type="number" id="year" placeholder=" year" /><br />
         <button type="submit">Add Book</button>
       </form>
     </div>

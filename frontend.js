@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (title && author && year) {
       try {
-        const response = await fetch("http://localhost:2500", {
+        const response = await fetch("http://localhost:4500", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch and display books
   async function fetchBooks() {
     try {
-      const response = await fetch("http://localhost:2500/");
+      const response = await fetch("http://localhost:4500/");
       const data = await response.json();
       const booksHtml = data
         .map((book) => {
